@@ -15,6 +15,8 @@
 		273E63201FEFA6F20060436E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E631F1FEFA6F20060436E /* UIColor.swift */; };
 		273E63221FEFA8B10060436E /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E63211FEFA8B10060436E /* ProductsViewController.swift */; };
 		273E63241FEFA8BF0060436E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E63231FEFA8BF0060436E /* ProductDetailViewController.swift */; };
+		273E63261FEFABB40060436E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E63251FEFABB40060436E /* API.swift */; };
+		273E63281FEFAD180060436E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E63271FEFAD180060436E /* NetworkManager.swift */; };
 		27A601E51FEF9ED3005F8832 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A601E41FEF9ED3005F8832 /* AppDelegate.swift */; };
 		27A601EC1FEF9ED3005F8832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A601EB1FEF9ED3005F8832 /* Assets.xcassets */; };
 		D81F37DDB274300B69ACE3A8 /* Pods_Turkcell_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DBF337263CD17B4B147676 /* Pods_Turkcell_Challenge.framework */; };
@@ -30,6 +32,8 @@
 		273E631F1FEFA6F20060436E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		273E63211FEFA8B10060436E /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		273E63231FEFA8BF0060436E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		273E63251FEFABB40060436E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		273E63271FEFAD180060436E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		27A601E11FEF9ED3005F8832 /* Turkcell Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turkcell Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A601E41FEF9ED3005F8832 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A601EB1FEF9ED3005F8832 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 		273E63041FEFA1C30060436E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				273E63251FEFABB40060436E /* API.swift */,
+				273E63271FEFAD180060436E /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -313,8 +319,10 @@
 				273E63201FEFA6F20060436E /* UIColor.swift in Sources */,
 				27A601E51FEF9ED3005F8832 /* AppDelegate.swift in Sources */,
 				273E631E1FEFA6320060436E /* BaseViewController.swift in Sources */,
+				273E63281FEFAD180060436E /* NetworkManager.swift in Sources */,
 				273E63221FEFA8B10060436E /* ProductsViewController.swift in Sources */,
 				273E63241FEFA8BF0060436E /* ProductDetailViewController.swift in Sources */,
+				273E63261FEFABB40060436E /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
