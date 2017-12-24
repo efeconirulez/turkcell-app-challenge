@@ -14,7 +14,7 @@ protocol APIEndpointType {
     var headers: [String : String]? { get }
     var path: String { get }
     var method: HTTPMethod { get }
-    var params: [String : Any?] { get }
+    var params: [String : Any] { get }
     var encoding: ParameterEncoding { get }
     
 }
@@ -52,7 +52,7 @@ extension API: APIEndpointType {
         }
     }
     
-    var params: [String : Any?] {
+    var params: [String : Any] {
         return [:]
     }
     
