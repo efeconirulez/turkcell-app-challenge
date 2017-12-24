@@ -108,7 +108,22 @@ extension ProductsViewController: UICollectionViewDataSource {
 }
 
 extension ProductsViewController: UICollectionViewDelegate {
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let productDetailViewController = storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as? ProductDetailViewController {
+            
+            let productDetail = ProductDetail(withProduct: self.filteredProducts[indexPath.row])
+            
+            productDetailViewController.productDetail = productDetail
+            
+            if self.navigationItem.searchController?.isActive ?? false {
+                self.navigationItem.searchController?.dismiss(animated: true, completion: {
+                    self.present(productDetailViewController, animated: true, completion: nil)
+                })
+            } else {
+                self.present(productDetailViewController, animated: true, completion: nil)
+            }
+        }
+    }
 }
 
 extension ProductsViewController: UICollectionViewDelegateFlowLayout {

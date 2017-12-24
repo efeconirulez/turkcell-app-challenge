@@ -14,6 +14,8 @@ class Product: NSObject, NSCoding {
     var price: Int?
     var image: String?
     
+    override init() {}
+    
     init(json: JSON) {
         self.id     = json["product_id"].string
         self.name   = json["name"].string

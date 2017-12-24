@@ -51,7 +51,7 @@
                     </view>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXK-8j-V0f">
                         <rect key="frame" x="154" y="217" width="60" height="24"/>
-                        <color key="backgroundColor" red="0.39402192831039429" green="0.68707650899887085" blue="0.6196027398109436" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.39215686274509803" green="0.68627450980392157" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="JQn-0a-iU9"/>
                         </constraints>

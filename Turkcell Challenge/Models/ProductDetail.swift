@@ -11,6 +11,15 @@ import SwiftyJSON
 class ProductDetail: Product {
     var desc: String?
     
+    init(withProduct product: Product) {
+        super.init()
+        
+        self.id    = product.id
+        self.name  = product.name
+        self.price = product.price
+        self.image = product.image
+    }
+    
     override init(json: JSON) {
         self.desc = json["description"].string
         

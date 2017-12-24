@@ -6,10 +6,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangTC-Regular</string>
+            <string>PingFangTC-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="9Nl-Cq-q76">
@@ -72,18 +79,114 @@
         <!--Product Detail View Controller-->
         <scene sceneID="0gn-TA-h7g">
             <objects>
-                <viewController id="PAT-E3-z0D" customClass="ProductDetailViewController" customModule="Turkcell_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailViewController" id="PAT-E3-z0D" customClass="ProductDetailViewController" customModule="Turkcell_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4ak-ej-4Dg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Abw-8u-oDg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Abw-8u-oDg" secondAttribute="height" multiplier="1:1" id="VBp-mi-InL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAP-UY-Hac">
+                                <rect key="frame" x="16" y="36" width="32" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="OzF-t9-Hsb"/>
+                                    <constraint firstAttribute="height" constant="32" id="oGO-so-eEo"/>
+                                </constraints>
+                                <state key="normal" image="Back"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTriggerBack:" destination="PAT-E3-z0D" eventType="touchUpInside" id="GIj-MV-vjK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Product Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEz-ET-uCx">
+                                <rect key="frame" x="12" y="419" width="268" height="29.5"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCW-pt-vg2">
+                                <rect key="frame" x="288" y="419" width="75" height="29.5"/>
+                                <color key="backgroundColor" red="0.3921568627" green="0.68627450980000004" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="SrZ-ef-wI9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYy-6m-oo6">
+                                <rect key="frame" x="12" y="478.5" width="351" height="24"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0g-OD-nbE" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="157" y="510.5" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="R04-2V-1Dq"/>
+                                    <constraint firstAttribute="height" constant="60" id="k5S-qj-KPv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.3921568627" green="0.68627450980000004" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="lineSpinFadeLoader"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="n0g-OD-nbE" firstAttribute="top" secondItem="JYy-6m-oo6" secondAttribute="bottom" constant="8" id="6Jj-OQ-VSr"/>
+                            <constraint firstItem="XCW-pt-vg2" firstAttribute="leading" secondItem="PEz-ET-uCx" secondAttribute="trailing" constant="8" id="9Yj-3t-IpV"/>
+                            <constraint firstItem="Abw-8u-oDg" firstAttribute="top" secondItem="4ak-ej-4Dg" secondAttribute="topMargin" id="Aos-Xr-0i4"/>
+                            <constraint firstItem="JYy-6m-oo6" firstAttribute="trailing" secondItem="XCW-pt-vg2" secondAttribute="trailing" id="Ixd-YQ-RBH"/>
+                            <constraint firstItem="PEz-ET-uCx" firstAttribute="top" secondItem="Abw-8u-oDg" secondAttribute="bottom" constant="24" id="LjA-96-8Eq"/>
+                            <constraint firstItem="lIO-tM-xoQ" firstAttribute="trailing" secondItem="Abw-8u-oDg" secondAttribute="trailing" id="Nb9-E2-Oe0"/>
+                            <constraint firstItem="PEz-ET-uCx" firstAttribute="leading" secondItem="lIO-tM-xoQ" secondAttribute="leading" constant="12" id="Net-a2-xCt"/>
+                            <constraint firstItem="n0g-OD-nbE" firstAttribute="centerX" secondItem="JYy-6m-oo6" secondAttribute="centerX" id="P4r-Zj-sUR"/>
+                            <constraint firstItem="JYy-6m-oo6" firstAttribute="top" secondItem="PEz-ET-uCx" secondAttribute="bottom" constant="30" id="P7H-Yv-i0H"/>
+                            <constraint firstItem="XCW-pt-vg2" firstAttribute="centerY" secondItem="PEz-ET-uCx" secondAttribute="centerY" id="SDl-GF-Ddo"/>
+                            <constraint firstItem="YAP-UY-Hac" firstAttribute="top" secondItem="lIO-tM-xoQ" secondAttribute="top" constant="16" id="Tgu-s9-oSV"/>
+                            <constraint firstItem="JYy-6m-oo6" firstAttribute="leading" secondItem="PEz-ET-uCx" secondAttribute="leading" id="Yot-Uu-TOr"/>
+                            <constraint firstItem="YAP-UY-Hac" firstAttribute="leading" secondItem="lIO-tM-xoQ" secondAttribute="leading" constant="16" id="aJY-Yx-pxn"/>
+                            <constraint firstItem="Abw-8u-oDg" firstAttribute="leading" secondItem="lIO-tM-xoQ" secondAttribute="leading" id="hmC-s8-HTr"/>
+                            <constraint firstItem="lIO-tM-xoQ" firstAttribute="trailing" secondItem="XCW-pt-vg2" secondAttribute="trailing" constant="12" id="pya-BC-X6P"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lIO-tM-xoQ"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionActivityIndicator" destination="n0g-OD-nbE" id="9gg-is-dKH"/>
+                        <outlet property="productDescriptionLabel" destination="JYy-6m-oo6" id="m59-bv-FIT"/>
+                        <outlet property="productImageView" destination="Abw-8u-oDg" id="krg-uX-IBH"/>
+                        <outlet property="productNameLabel" destination="PEz-ET-uCx" id="T3t-XF-sA6"/>
+                        <outlet property="productPriceTagLabel" destination="XCW-pt-vg2" id="8ul-JK-7aG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ir9-jv-XYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="872.79999999999995" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Back" width="64" height="64"/>
+    </resources>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

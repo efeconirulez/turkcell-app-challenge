@@ -7,13 +7,63 @@
 //
 
 import UIKit
+import FTIndicator
+import NVActivityIndicatorView
 
 class ProductDetailViewController: BaseViewController {
+    
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productDescriptionLabel: UILabel!
+    @IBOutlet weak var productPriceTagLabel: UILabel!
+    @IBOutlet weak var descriptionActivityIndicator: NVActivityIndicatorView!
+    
+    
+    var productDetail: ProductDetail!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setViews()
+        descriptionActivityIndicator.startAnimating()
+        
+        fetchProductDetail()
+    }
+    
+    func setViews() {
+        productNameLabel.text = productDetail.name ?? ""
+        productPriceTagLabel.text = "$ \(productDetail.price ?? 0)"
+        productDescriptionLabel.text = productDetail.desc ?? ""
+        productImageView.kf.indicatorType = .activity
+        
+        if let imageURL = productDetail.image {
+            let url = URL(string: imageURL)
+            
+            productImageView.kf.setImage(with: url)
+        }
+    }
+    
+    func fetchProductDetail() {
+        guard let id = productDetail.id else {
+            FTIndicator.showError(withMessage: "Invalid product!")
+            
+            dismiss(animated: true, completion: nil)
+            
+            return
+        }
+        
+        NetworkManager.request(forEndpoint: .productDetail(id: id)) { (isSuccess, json) in
+            guard isSuccess, let json = json else {
+                FTIndicator.showError(withMessage: "Error recieving product detail!")
+                
+                return
+            }
+            
+            self.productDetail = ProductDetail(json: json)
+            self.descriptionActivityIndicator.stopAnimating()
+            
+            self.setViews()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +71,9 @@ class ProductDetailViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func didTriggerBack(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
-    */
+    
 
 }
