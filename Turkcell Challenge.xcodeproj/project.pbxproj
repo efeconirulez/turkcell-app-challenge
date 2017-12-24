@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		273E63101FEFA4810060436E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273E63121FEFA4810060436E /* LaunchScreen.storyboard */; };
 		273E63151FEFA4A40060436E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273E63131FEFA4A40060436E /* Main.storyboard */; };
+		273E63191FEFA5BA0060436E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E63171FEFA5BA0060436E /* ProductCollectionViewCell.swift */; };
+		273E631A1FEFA5BA0060436E /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273E63181FEFA5BA0060436E /* ProductCollectionViewCell.xib */; };
+		273E631E1FEFA6320060436E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E631D1FEFA6320060436E /* BaseViewController.swift */; };
+		273E63201FEFA6F20060436E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273E631F1FEFA6F20060436E /* UIColor.swift */; };
 		27A601E51FEF9ED3005F8832 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A601E41FEF9ED3005F8832 /* AppDelegate.swift */; };
 		27A601EC1FEF9ED3005F8832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A601EB1FEF9ED3005F8832 /* Assets.xcassets */; };
 		D81F37DDB274300B69ACE3A8 /* Pods_Turkcell_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DBF337263CD17B4B147676 /* Pods_Turkcell_Challenge.framework */; };
@@ -18,6 +22,10 @@
 		26DBF337263CD17B4B147676 /* Pods_Turkcell_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turkcell_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		273E63111FEFA4810060436E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		273E63141FEFA4A40060436E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		273E63171FEFA5BA0060436E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		273E63181FEFA5BA0060436E /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		273E631D1FEFA6320060436E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		273E631F1FEFA6F20060436E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		27A601E11FEF9ED3005F8832 /* Turkcell Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turkcell Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A601E41FEF9ED3005F8832 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A601EB1FEF9ED3005F8832 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +56,7 @@
 		273E63011FEFA1870060436E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				273E63161FEFA5970060436E /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -55,6 +64,7 @@
 		273E63021FEFA1870060436E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				273E631C1FEFA6060060436E /* Base */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -62,6 +72,7 @@
 		273E63031FEFA1C30060436E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				273E631F1FEFA6F20060436E /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -79,6 +90,23 @@
 				27A601E41FEF9ED3005F8832 /* AppDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		273E63161FEFA5970060436E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				273E63171FEFA5BA0060436E /* ProductCollectionViewCell.swift */,
+				273E63181FEFA5BA0060436E /* ProductCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		273E631C1FEFA6060060436E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				273E631D1FEFA6320060436E /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		27A601D81FEF9ED3005F8832 = {
@@ -197,6 +225,7 @@
 			files = (
 				273E63151FEFA4A40060436E /* Main.storyboard in Resources */,
 				273E63101FEFA4810060436E /* LaunchScreen.storyboard in Resources */,
+				273E631A1FEFA5BA0060436E /* ProductCollectionViewCell.xib in Resources */,
 				27A601EC1FEF9ED3005F8832 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273E63191FEFA5BA0060436E /* ProductCollectionViewCell.swift in Sources */,
+				273E63201FEFA6F20060436E /* UIColor.swift in Sources */,
 				27A601E51FEF9ED3005F8832 /* AppDelegate.swift in Sources */,
+				273E631E1FEFA6320060436E /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
