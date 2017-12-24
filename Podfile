@@ -9,5 +9,6 @@ target 'Turkcell Challenge' do
     pod 'SwifterSwift', :git => 'https://github.com/SwifterSwift/SwifterSwift.git'
     pod 'SwiftyJSON', '~> 3.1'
     pod 'Kingfisher', '~> 4.0'
+    pod 'ReachabilitySwift'
     
 end
