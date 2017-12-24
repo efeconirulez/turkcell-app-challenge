@@ -36,3 +36,18 @@ class Product: NSObject, NSCoding {
     }
     
 }
+
+extension Product {
+    class func initArray(jsonArray: [JSON]?) -> [Product] {
+        
+        var productArray = [Product]()
+        
+        guard let jsonArray = jsonArray else { return productArray }
+        
+        for json in jsonArray {
+            productArray.append(Product(json: json))
+        }
+        
+        return productArray
+    }
+}

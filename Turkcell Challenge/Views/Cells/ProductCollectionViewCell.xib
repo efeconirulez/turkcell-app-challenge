@@ -18,56 +18,52 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModule="Turkcell_Challenge" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="401" height="339"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModule="Turkcell_Challenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="261"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="401" height="339"/>
+                <rect key="frame" x="0.0" y="0.0" width="367" height="261"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Epj-9i-Fnl">
-                        <rect key="frame" x="0.0" y="0.0" width="401" height="173"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Epj-9i-Fnl">
+                        <rect key="frame" x="4" y="4" width="359" height="152"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="173" id="HlD-Ub-PvH"/>
+                            <constraint firstAttribute="height" constant="152" id="HlD-Ub-PvH"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy2-IZ-Kg4">
-                        <rect key="frame" x="8" y="189" width="385" height="24"/>
-                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy2-IZ-Kg4">
+                        <rect key="frame" x="8" y="172" width="351" height="20"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eQ-7U-huL">
-                        <rect key="frame" x="8" y="225" width="385" height="1"/>
+                        <rect key="frame" x="8" y="204" width="351" height="1"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="bwZ-h2-5xf"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PriceTag" translatesAutoresizingMaskIntoConstraints="NO" id="QEB-IZ-IyL">
-                        <rect key="frame" x="139" y="279.5" width="32" height="32"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="32" id="0Ff-Jm-GPC"/>
-                            <constraint firstAttribute="height" constant="32" id="QVs-1E-H9A"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXK-8j-V0f">
-                        <rect key="frame" x="171" y="257" width="60" height="22.5"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXK-8j-V0f">
+                        <rect key="frame" x="154" y="217" width="60" height="24"/>
+                        <color key="backgroundColor" red="0.39402192831039429" green="0.68707650899887085" blue="0.6196027398109436" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="JQn-0a-iU9"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="16"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="2"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" red="0.39402192831039429" green="0.68707650899887085" blue="0.6196027398109436" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <real key="value" value="0.0"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="4"/>
+                                <real key="value" value="3"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
@@ -76,31 +72,45 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="5eQ-7U-huL" firstAttribute="top" secondItem="Gy2-IZ-Kg4" secondAttribute="bottom" constant="12" id="1aw-ve-4sw"/>
-                <constraint firstItem="Epj-9i-Fnl" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="2aw-zZ-Pt1"/>
-                <constraint firstItem="Epj-9i-Fnl" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="F5a-xP-fZx"/>
+                <constraint firstItem="Epj-9i-Fnl" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="4" id="2aw-zZ-Pt1"/>
+                <constraint firstItem="Epj-9i-Fnl" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="4" id="F5a-xP-fZx"/>
                 <constraint firstItem="xXK-8j-V0f" firstAttribute="centerX" secondItem="5eQ-7U-huL" secondAttribute="centerX" id="Fqg-pN-cSA"/>
-                <constraint firstItem="xXK-8j-V0f" firstAttribute="leading" secondItem="QEB-IZ-IyL" secondAttribute="trailing" id="GQb-9B-STd"/>
                 <constraint firstItem="5eQ-7U-huL" firstAttribute="leading" secondItem="Gy2-IZ-Kg4" secondAttribute="leading" id="GUG-0r-hIX"/>
-                <constraint firstItem="QEB-IZ-IyL" firstAttribute="top" secondItem="xXK-8j-V0f" secondAttribute="bottom" id="IYt-0A-mud"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="Gy2-IZ-Kg4" secondAttribute="trailing" constant="8" id="OUd-CW-tZA"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="Epj-9i-Fnl" secondAttribute="trailing" id="e3H-va-xHg"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="Epj-9i-Fnl" secondAttribute="trailing" constant="4" id="e3H-va-xHg"/>
                 <constraint firstItem="Gy2-IZ-Kg4" firstAttribute="top" secondItem="Epj-9i-Fnl" secondAttribute="bottom" constant="16" id="nYJ-bG-uB1"/>
                 <constraint firstItem="Gy2-IZ-Kg4" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="8" id="uAV-3x-MCB"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="QEB-IZ-IyL" secondAttribute="bottom" constant="27.5" id="uS6-3q-pVm"/>
-                <constraint firstItem="xXK-8j-V0f" firstAttribute="top" secondItem="5eQ-7U-huL" secondAttribute="bottom" constant="31" id="x9C-MM-4wR"/>
+                <constraint firstItem="xXK-8j-V0f" firstAttribute="top" secondItem="5eQ-7U-huL" secondAttribute="bottom" constant="12" id="x9C-MM-4wR"/>
                 <constraint firstItem="5eQ-7U-huL" firstAttribute="trailing" secondItem="Gy2-IZ-Kg4" secondAttribute="trailing" id="xgp-ZP-GLF"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="401" height="339"/>
+            <size key="customSize" width="367" height="261"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                    <size key="value" width="2" height="2"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                    <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="productImageView" destination="Epj-9i-Fnl" id="Sm9-3i-aQn"/>
                 <outlet property="productNameLabel" destination="Gy2-IZ-Kg4" id="TTk-fS-Fyh"/>
                 <outlet property="productPriceTagLabel" destination="xXK-8j-V0f" id="RpO-60-DHq"/>
             </connections>
-            <point key="canvasLocation" x="-49.5" y="7.5"/>
+            <point key="canvasLocation" x="-66.5" y="-31.5"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="PriceTag" width="64" height="64"/>
-    </resources>
 </document>

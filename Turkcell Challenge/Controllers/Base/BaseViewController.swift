@@ -9,8 +9,13 @@
 import UIKit
 import SwifterSwift
 import NVActivityIndicatorView
+import Kingfisher
 
 class BaseViewController: UIViewController {
+    
+    override func prefersHomeIndicatorAutoHidden() -> Bool {
+        return true
+    }
     
     var backgroundColor: UIColor {
         return UIColor.white
