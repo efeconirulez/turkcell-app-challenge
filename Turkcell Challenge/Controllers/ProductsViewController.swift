@@ -8,6 +8,7 @@
 
 import UIKit
 import FTIndicator
+import Hero
 
 class ProductsViewController: BaseViewController {
     
@@ -56,6 +57,14 @@ class ProductsViewController: BaseViewController {
         fetchCachedProducts()
         
         fetchProducts()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        for cell in collectionView.visibleCells where cell is ProductCollectionViewCell {
+            (cell as! ProductCollectionViewCell).prepareForReuse()
+        }
     }
 
     func fetchProducts() {
@@ -110,6 +119,12 @@ extension ProductsViewController: UICollectionViewDataSource {
 extension ProductsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let productDetailViewController = storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as? ProductDetailViewController {
+            
+            if let cell = collectionView.cellForItem(at: indexPath) as? ProductCollectionViewCell {
+                cell.productImageView.heroID = "ProductImage"
+                cell.productNameLabel.heroID = "ProductName"
+                cell.productPriceTagLabel.heroID = "ProductPriceTag"
+            }
             
             let productDetail = ProductDetail(withProduct: self.filteredProducts[indexPath.row])
             

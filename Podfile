@@ -10,5 +10,6 @@ target 'Turkcell Challenge' do
     pod 'SwiftyJSON', '~> 3.1'
     pod 'Kingfisher', '~> 4.0'
     pod 'ReachabilitySwift'
+    pod 'Hero', '~> 1.0'
     
 end

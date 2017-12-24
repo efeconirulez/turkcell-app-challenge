@@ -30,5 +30,11 @@ class ProductCollectionViewCell: UICollectionViewCell {
         
         productImageView.kf.indicatorType = .activity
     }
+    
+    override func prepareForReuse() {
+        productPriceTagLabel.heroID = ""
+        productNameLabel.heroID = ""
+        productImageView.heroID = ""
+    }
 
 }
