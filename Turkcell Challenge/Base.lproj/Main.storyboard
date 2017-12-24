@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-676" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Products View Controller-->
         <scene sceneID="tQs-1z-lbm">
             <objects>
-                <viewController id="BTj-UC-x5C" sceneMemberID="viewController">
+                <viewController id="BTj-UC-x5C" customClass="ProductsViewController" customModule="Turkcell_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nb0-OM-Ok7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vvd-gW-oxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="109.59999999999999" y="134.48275862068968"/>
+        </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="0gn-TA-h7g">
+            <objects>
+                <viewController id="PAT-E3-z0D" customClass="ProductDetailViewController" customModule="Turkcell_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ak-ej-4Dg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lIO-tM-xoQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ir9-jv-XYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="134"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
